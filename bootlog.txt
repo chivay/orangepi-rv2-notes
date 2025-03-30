@@ -1,0 +1,136 @@
+sys: 0x200
+try sd...
+bm:3
+j...
+
+U-Boot SPL 2022.10ky (Mar 11 2025 - 22:24:18 +0800)
+[   0.114] DDR type LPDDR4X
+[   0.126] lpddr4_silicon_init consume 12ms
+[   0.127] Change DDR data rate to 2400MT/s
+spl: partition error
+mmc_load_image_raw_sector: mmc block read error
+[   0.852] Boot from fit configuration x1_orangepi-rv2
+[   0.854] ## Checking hash(es) for config conf_14 ... OK
+[   0.859] ## Checking hash(es) for Image opensbi ... OK
+[   0.864] ## Checking hash(es) for Image uboot ... OK
+[   0.870] ## Checking hash(es) for Image fdt_14 ... OK
+[   0.915]
+
+U-Boot 2022.10ky (Mar 11 2025 - 22:24:18 +0800)
+
+[   0.918] CPU:   rv64imafdcv
+[   0.920] Model: ky x1 orangepi-rv2 board
+[   0.924] DRAM:  DDR size = 8192 MB
+[   0.928] DDR size = 8192 MB
+[   0.930] DDR size = 8192 MB
+[   0.933] 8 GiB
+[   1.008] reset driver probe start
+[   1.010] reset driver probe finish
+[   1.018] DCDC_REG1@dcdc1: enabling
+[   1.020] DCDC_REG3@dcdc3: enabling
+[   1.025] LDO_REG1@ldo1: enabling
+[   1.029] SWITCH_REG1@switch1: enabling
+[   1.030] SWITCH_REG2@pwr-event: enabling
+[   1.034] SWITCH_REG3@pwr-int: enabling
+[   1.037] SWITCH_REG4@rtc-ctrl: enabling
+[   1.041] SWITCH_REG5@rtc-event: enabling
+[   1.045] SWITCH_REG6@rtc-irq: enabling
+[   1.049] SWITCH_REG7@power-down: enabling
+[   1.053] SWITCH_REG8@reboot-flag: enabling
+[   1.058] vcc5v-otg-regulator@vcc5v_otg: set 5000000 uV; enabling
+[   1.063] vcc3v3-pcie-regulator@vcc3v3_pcie: set 3300000 uV; enabling
+[   1.069] DDR size = 8192 MB
+[   1.074] Core:  417 devices, 30 uclasses, devicetree: board
+[   1.088] WDT:   Started PMIC_WDT with servicing (60s timeout)
+[   1.092] WDT:   Started watchdog@D4080000 with servicing (60s timeout)
+[   1.101] MMC:   sdh@d4280000: probe done.
+[   1.107] sdh@d4281000: probe done.
+[   1.108] sdh@d4280000: 0, sdh@d4281000: 2
+[   1.112] Loading Environment from MMC... sdh@d4280000: 74 clk wait timeout(100)
+[   1.183] OK
+[   1.192] Now init Rterm...
+[   1.192] pcie prot id = 1, porta_init_done = 0
+[   1.196] Now waiting portA resister tuning done...
+[   1.200] porta redonly_reg2: 00006d48
+[   1.204] pcie_rcal = 0x00006d48
+[   1.207] pcie port id = 1, lane num = 2
+[   1.211] Now int init_puphy...
+[   1.214] waiting pll lock...
+[   1.217] Now finish init_puphy....
+[   1.220] pcie_dw_x1 pcie@ca400000: Unable to get phy0
+[   1.225] pcie_dw_x1 pcie@ca400000: Unable to get phy1
+[   2.331] PCIE-0: Link down
+[   2.419] Found device 'hdmi@c0400500', disp_uc_priv=000000007deb4a70
+[   2.430] hdmi_phy_wait_for_hpd() hdmi get hpd signal
+[   2.432] fb=7f700000, size=1920x1080
+[   2.444] initialize_console_log_buffer
+[   2.445] Have allocated memory for console log buffer
+[   2.450] In:    serial
+[   2.452] Out:   serial
+[   2.454] Err:   serial
+[   2.458] Default to 100kHz
+[   2.473] EEPROM: TlvInfo v1 len=38
+[   2.474] valid ethaddr: c0:74:2b:fc:d3:2a
+[   2.478] Cannot find TLV data: part#
+[   2.481] Cannot find TLV data: serial#
+[   2.485] Cannot find TLV data: manufacture_date
+[   2.489] Cannot find TLV data: manufacturer
+[   2.493] Cannot find TLV data: device_version
+[   2.498] Cannot find TLV data: sdk_version
+[   2.502] All buttons probed successfully
+[   2.507] Read PMIC reg ab value f0
+[   2.509] Failed to get fastboot key config: -19
+[   2.514] Net:   RGMII interface
+[   2.516] eth0: ethernet@cac80000
+[   2.522] Autoboot in 0 seconds
+[   2.532] starting USB...
+[   2.532] Bus ehci1@c0980100: ehci_x1_ci ehci1@c0980100: ehci_mv_probe Enter ...
+[   2.543] mv_usb_phy usbphy1@c09c0000: x1-ci-usb-phy-probe: Enter...
+[   2.547] ehci_x1_ci ehci1@c0980100: ehci-x1-ci: init hccr c0980100 and hcor c0980140 hc_length 64
+[   2.570] USB EHCI 1.00
+[   2.570] Bus dwc3@c0a00000: No USB maximum speed specified. Using super speed
+[   2.582] mv_usb_phy usb2phy@0xc0a30000: x1-ci-usb-phy-probe: Enter...
+[   2.586] x1_combphy phy@c0b10000: USB3 PHY init.
+[   2.590] dwc3-generic-host dwc3@c0a00000: this is a DesignWare USB3 DRD Core
+[   3.007] Register 2000140 NbrPorts 2
+Starting the controller
+[   3.010] USB XHCI 1.10
+[   3.012] scanning bus ehci1@c0980100 for devices... 1 USB Device(s) found
+[   4.151] scanning bus dwc3@c0a00000 for devices... 3 USB Device(s) found
+[   5.678]        scanning usb for storage devices... 0 Storage Device(s) found
+[   5.682]
+Device 0: unknown device
+[   5.729] switch to partitions #0, OK
+[   5.729] mmc0 is current device
+[   5.747] Scanning mmc 0:1...
+[   5.850] Found U-Boot script /boot/boot.scr
+[   5.878] 2544 bytes read in 15 ms (165 KiB/s)
+[   5.879] ## Executing script at 2c100000
+[   5.883] Boot script loaded from mmc 0
+[   5.910] 171 bytes read in 11 ms (14.6 KiB/s)
+[   7.181] 20488358 bytes read in 1257 ms (15.5 MiB/s)
+[   9.307] 34558464 bytes read in 2110 ms (15.6 MiB/s)
+[   9.353] 112811 bytes read in 31 ms (3.5 MiB/s)
+[   9.356] Moving Image from 0x11000000 to 0x200000, end=238c000
+[   9.373] ## Loading init Ramdisk from Legacy Image at 21000000 ...
+[   9.376]    Image Name:   uInitrd
+[   9.379]    Image Type:   RISC-V Linux RAMDisk Image (gzip compressed)
+[   9.386]    Data Size:    20488294 Bytes = 19.5 MiB
+[   9.391]    Load Address: 00000000
+[   9.394]    Entry Point:  00000000
+   Verifying Checksum ... OK
+[   9.492] ## Flattened Device Tree blob at 31000000
+[   9.494]    Booting using the fdt blob at 0x31000000
+[   9.599]    Loading Ramdisk to 7ca04000, end 7dd8e066 ... OK
+[   9.616]    Loading Device Tree to 000000007c980000, end 000000007ca03fff ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 6.6.63-ky (root@test) (riscv64-unknown-linux-gnu-gcc (g09b62c20e09) 13.2.1 20240423, GNU ld (GNU Binutils) 2.42) #1.0.0 SMP PREEMPT Wed Mar 12 09:04:00 CST 2025
+[    0.000000] Machine model: ky x1 orangepi-rv2 board
+[    0.000000] SBI specification v1.0 detected
+[    0.000000] SBI implementation ID=0x1 Version=0x10003
+[    0.000000] SBI IPI extension detected
+[    0.000000] SBI RFENCE extension detected
+[    0.000000] earlycon: sbi0 at I/O port 0x0 (options '')
+[    0.000000] printk: bootconsole [sbi0] enabled
